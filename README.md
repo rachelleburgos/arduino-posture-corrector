@@ -1,14 +1,13 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  <img src="images/logo.png" alt="Logo" width="80" height="80">
 
   <h3 align="center">Arduino Posture Corrector</h3>
 
   <p align="center">
     A small wearable device that corrects the posture of the wearer.
+    
 </div>
 
 
@@ -38,7 +37,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<div align="center">
+  <img src="images/screenshot.png" alt="Product Image">
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -52,6 +53,8 @@
 * [Tactile Button Switch](https://www.adafruit.com/product/367)
 * [PowerBoost 1000 Charger](https://www.adafruit.com/product/2465)
 * [3.7V 4400mAh Lithium Battery Pack](https://www.adafruit.com/product/354)
+
+Code written in C++.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
