@@ -33,8 +33,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-
-
 The device is powered by a 3.7V Lithium Ion battery, boosted by the Adafruit PowerBoost 1000 to 5V. The boosted output is then fed into the Arduino and all other components so that they all work at the 5V logic level. The MPU-6050 Accelerometer-Gyroscope and DRV-2605L Haptic Motor Driver are connected to the Arduino using I2C communication, whereas the ST7789 TFT Display is connected to the Arduino using an SPI connection. 
 
 The MPU-6050 serves as the project's sensor, gathering data on the project's orientation, acceleration, and temperature. Using the [MPU\_light](https://github.com/rfetick/MPU6050\_light/) Arduino library by rfetick on GitHub, I was able to fetch these values from the component. In order to sense whether a person is slouching or not, only the orientation values from the MPU-6050 are needed. 
@@ -65,7 +63,11 @@ Be sure to install the necessary drivers for the Adafruit Metro Mini.
 - If running Windows, please install the [Windows Drivers for Adafruit products](https://github.com/adafruit/Adafruit_Windows_Drivers/releases/latest).
 - Linux comes with the necessary drivers ready.
 
-Wire the 
+First, wire the components as shown in the schematic below and then upload the [sketch](arduino-posture-corrector/arduino-posture-corrector.ino) to the Arduino device.
+<div align ="center">
+	<img src="final-paper/schematic.png" alt="Device schematic"/>
+</div>
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
