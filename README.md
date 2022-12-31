@@ -38,8 +38,16 @@
 ## About The Project
 
 <div align="center">
-  <img src="images/screenshot.png" alt="Product Image">
+  <img src="final-paper/schematic.png" alt="Device schematic">
 </div>
+A small wearable device that alerts the user whenever they are slouching. Created for my embedded systems course at CUNY Hunter College during the Fall 2022 semester.
+
+
+The device is powered by a 3.7V Lithium Ion battery, boosted by the Adafruit PowerBoost 1000 to 5V. The boosted output is then fed into the Arduino and all other components so that they all work at the 5V logic level. The MPU-6050 Accelerometer-Gyroscope and DRV-2605L Haptic Motor Driver are connected to the Arduino using I2C communication, whereas the ST7789 TFT Display is connected to the Arduino using an SPI connection. 
+
+The MPU-6050 serves as the project's sensor, gathering data on the project's orientation, acceleration, and temperature. Using the \href{https://github.com/rfetick/MPU6050\_light/}{MPU\_light} Arduino library by rfetick on GitHub, I was able to fetch these values from the component. In order to sense whether a person is slouching or not, only the orientation values from the MPU-6050 are needed. 
+If the pitch angle measured is greater than or equal to 3, then the user is alerted by the buzzing of the vibrating motor disc controlled by the DRV-2605L using the \href{https://github.com/adafruit/Adafruit\_DRV2605\_Library}{Adafruit\_DRV2605} library to trigger the mini motor disc to vibrate. Additionally, the ST7789 TFT display is cleared and displays a new message insulting the wearer. 
+Otherwise if the pitch angle is less than 3, the vibrating mini disc does not vibrate and the attached display shows a message complementing the wearer on their good posture. The screen graphics are written to using the \href{ttps://github.com/adafruit/Adafruit-GFX-Library}{Adafruit\_GFX} and \href{https://github.com/adafruit/Adafruit-ST7735-Library }{Adafruit\_ST7789} libraries. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -54,54 +62,23 @@
 * [PowerBoost 1000 Charger](https://www.adafruit.com/product/2465)
 * [3.7V 4400mAh Lithium Battery Pack](https://www.adafruit.com/product/354)
 
-Code written in C++.
+Code written in C++ on the Arduino IDE.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
+Be sure to install the necessary drivers for the Adafruit Metro Mini.
+- If running Mac OS X, please use the [SiLabs drivers](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers).
+- If running Windows, please install the [Windows Drivers for Adafruit products](https://github.com/adafruit/Adafruit_Windows_Drivers/releases/latest).
+- Linux comes with the necessary drivers ready.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,18 +93,11 @@ Distributed under the GNU 3.0 License. See `LICENSE.txt` for more information.
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
+External ibraries used include:
+- [MPU6050\_light by rfetick](https://github.com/rfetick/MPU6050\_light/) on GitHub downloaded on 12/18/2022
+- [Adafruit\_DRV2605 by AdaFruit Industries](https://github.com/adafruit/Adafruit\_DRV2605\_Library) downloaded on 11/16/2022
+- [Adafruit\_GFX by AdaFruit Industries](https://github.com/adafruit/Adafruit-GFX-Library) downloaded on 11/28/2022
+- [Adafruit\_ST7789 by AdaFruit Industries](https://github.com/adafruit/Adafruit-ST7735-Library) downloaded on 11/28/2022 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
