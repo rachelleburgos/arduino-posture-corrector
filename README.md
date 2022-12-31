@@ -1,13 +1,10 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <img src="images/logo.png" alt="Logo" width="80" height="80">
-
   <h3 align="center">Arduino Posture Corrector</h3>
 
   <p align="center">
-    A small wearable device that corrects the posture of the wearer.
-    
+  A small wearable device that alerts the user whenever they are slouching. Created for my embedded systems course at CUNY Hunter College during the Fall 2022 semester. 
 </div>
 
 
@@ -26,7 +23,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -37,20 +33,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<div align="center">
-  <img src="final-paper/schematic.png" alt="Device schematic">
-</div>
-A small wearable device that alerts the user whenever they are slouching. Created for my embedded systems course at CUNY Hunter College during the Fall 2022 semester.
 
 
 The device is powered by a 3.7V Lithium Ion battery, boosted by the Adafruit PowerBoost 1000 to 5V. The boosted output is then fed into the Arduino and all other components so that they all work at the 5V logic level. The MPU-6050 Accelerometer-Gyroscope and DRV-2605L Haptic Motor Driver are connected to the Arduino using I2C communication, whereas the ST7789 TFT Display is connected to the Arduino using an SPI connection. 
 
-The MPU-6050 serves as the project's sensor, gathering data on the project's orientation, acceleration, and temperature. Using the \href{https://github.com/rfetick/MPU6050\_light/}{MPU\_light} Arduino library by rfetick on GitHub, I was able to fetch these values from the component. In order to sense whether a person is slouching or not, only the orientation values from the MPU-6050 are needed. 
-If the pitch angle measured is greater than or equal to 3, then the user is alerted by the buzzing of the vibrating motor disc controlled by the DRV-2605L using the \href{https://github.com/adafruit/Adafruit\_DRV2605\_Library}{Adafruit\_DRV2605} library to trigger the mini motor disc to vibrate. Additionally, the ST7789 TFT display is cleared and displays a new message insulting the wearer. 
-Otherwise if the pitch angle is less than 3, the vibrating mini disc does not vibrate and the attached display shows a message complementing the wearer on their good posture. The screen graphics are written to using the \href{ttps://github.com/adafruit/Adafruit-GFX-Library}{Adafruit\_GFX} and \href{https://github.com/adafruit/Adafruit-ST7735-Library }{Adafruit\_ST7789} libraries. 
+The MPU-6050 serves as the project's sensor, gathering data on the project's orientation, acceleration, and temperature. Using the [MPU\_light](https://github.com/rfetick/MPU6050\_light/) Arduino library by rfetick on GitHub, I was able to fetch these values from the component. In order to sense whether a person is slouching or not, only the orientation values from the MPU-6050 are needed. 
+If the pitch angle measured is greater than or equal to 3, then the user is alerted by the buzzing of the vibrating motor disc controlled by the DRV-2605L using the [Adafruit\_DRV2605](https://github.com/adafruit/Adafruit\_DRV2605\_Library) library to trigger the mini motor disc to vibrate. Additionally, the ST7789 TFT display is cleared and displays a new message insulting the wearer. Otherwise if the pitch angle is less than 3, the vibrating mini disc does not vibrate and the attached display shows a message complementing the wearer on their good posture. The screen graphics are written to using the [Adafruit\_GFX](https://github.com/adafruit/Adafruit-GFX-Library) and [Adafruit\_ST7789](https://github.com/adafruit/Adafruit-ST7735-Library) libraries. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 ### Built With
@@ -74,12 +64,8 @@ Be sure to install the necessary drivers for the Adafruit Metro Mini.
 - If running Mac OS X, please use the [SiLabs drivers](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers).
 - If running Windows, please install the [Windows Drivers for Adafruit products](https://github.com/adafruit/Adafruit_Windows_Drivers/releases/latest).
 - Linux comes with the necessary drivers ready.
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
+Wire the 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
