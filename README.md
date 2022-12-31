@@ -81,7 +81,7 @@ Distributed under the GNU 3.0 License. See `LICENSE.txt` for more information.
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-External ibraries used include:
+External libraries used:
 - [MPU6050\_light by rfetick](https://github.com/rfetick/MPU6050\_light/) on GitHub downloaded on 12/18/2022
 - [Adafruit\_DRV2605 by AdaFruit Industries](https://github.com/adafruit/Adafruit\_DRV2605\_Library) downloaded on 11/16/2022
 - [Adafruit\_GFX by AdaFruit Industries](https://github.com/adafruit/Adafruit-GFX-Library) downloaded on 11/28/2022
