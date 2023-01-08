@@ -46,7 +46,7 @@ If the pitch angle measured is greater than or equal to 3, then the user is aler
 * [MPU-6050 Gyroscope and Accelerometer](https://www.adafruit.com/product/3886)
 * [DRV2605L Haptic Motor Controller](https://www.adafruit.com/product/2305)
 * [Vibrating Mini Motor Disc](https://www.adafruit.com/product/1201)
-* [Tactile Button Switch](https://www.adafruit.com/product/367)
+* Toggle Switch
 * [PowerBoost 1000 Charger](https://www.adafruit.com/product/2465)
 * [3.7V 4400mAh Lithium Battery Pack](https://www.adafruit.com/product/354)
 
@@ -92,4 +92,3 @@ External libraries used:
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
