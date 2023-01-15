@@ -4,7 +4,7 @@
   <h3 align="center">Arduino Posture Corrector</h3>
 
   <p align="center">
-  A small wearable device that alerts the user whenever they are slouching. Created for my embedded systems course at CUNY Hunter College during the Fall 2022 semester. 
+  A small wearable device that alerts the user whenever they are slouching.  
 </div>
 
 
