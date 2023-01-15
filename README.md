@@ -65,7 +65,7 @@ Be sure to install the necessary drivers for the Adafruit Metro Mini.
 
 First, wire the components as shown in the schematic below and then upload the [sketch](arduino-posture-corrector/arduino-posture-corrector.ino) to the Arduino device.
 <div align ="center">
-	<img src="final-paper/schematic.png" alt="Device schematic"/>
+	<img src="schematic.png" alt="Device schematic"/>
 </div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
